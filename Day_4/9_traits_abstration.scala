@@ -1,4 +1,4 @@
-abstract class Pet (name: String) {
+abstract class Pet (name: String) extends abc{
     def speak(): Unit = println("Yo")   
     def comeToMaster(): Unit     
 }
@@ -17,7 +17,7 @@ class Dog(name: String) extends Pet(name) {
 object AbstractClass {
     def main(args:Array[String])={
         var dog = new Dog("bullDog");
-
+        dog.a();
         dog.speak();
         dog.comeToMaster();
     }
