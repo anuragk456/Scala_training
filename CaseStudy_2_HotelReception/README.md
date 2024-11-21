@@ -2,7 +2,7 @@
 
 The **Hotel Reception Management System** is a modular application designed to streamline various aspects of hotel operations, including room bookings, restaurant services, Wi-Fi management, and room service functionalities. Each feature is implemented as a separate service for scalability and maintainability.
 
-**GitHub Repository**: [Hotel Reception Management System](https://github.com/anuragk456/HotelReception)
+**GitHub Repository**: [Hotel Reception Management System](https://github.com/anuragk456/Hotel_Reception)
 
 ---
 
@@ -84,5 +84,5 @@ Handles room-related operations, including updating statuses (available, occupie
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/anuragk456/HotelReception.git
+   git clone https://github.com/anuragk456/Hotel_Reception
    cd HotelReception
