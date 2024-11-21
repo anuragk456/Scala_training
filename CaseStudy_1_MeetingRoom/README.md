@@ -18,7 +18,7 @@ This project is an **Office Meeting Room Management System**, designed to stream
 ## Repository Link
 
 The code for this project is maintained in a separate repository for better modularization and version control.  
-**GitHub Repo**: [Meeting Room Management System](https://github.com/anuragk456/MeetingRoomCaseStudy)
+**GitHub Repo**: [Meeting Room Management System](https://github.com/anuragk456/MeetingRoom)
 
 ---
 
@@ -34,7 +34,7 @@ The code for this project is maintained in a separate repository for better modu
 
 ## How to Run the Project
 
-1. Clone the repository from the [GitHub link](https://github.com/anuragk456/MeetingRoomCaseStudy).
+1. Clone the repository from the [GitHub link](https://github.com/anuragk456/MeetingRoom).
 2. Set up the MySQL database and configure the schema as outlined in the repository documentation.
 3. Configure Kafka for notification services.
 4. Deploy the application using Docker.
