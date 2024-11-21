@@ -1,0 +1,3 @@
+[submodule "CaseStudy_1_MeetingRoom/MeetingRoom"]
+	path = CaseStudy_1_MeetingRoom/MeetingRoom
+	url = https://github.com/anuragk456/MeetingRoom.git
