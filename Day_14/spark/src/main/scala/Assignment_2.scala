@@ -4,7 +4,7 @@ object Assignment_2 {
   def main(args: Array[String]): Unit = {
 
     val spark = SparkSession.builder()
-      .appName("CartesianProductExample")
+      .appName("Assignment_2")
       .master("local[*]")
       .getOrCreate()
 
