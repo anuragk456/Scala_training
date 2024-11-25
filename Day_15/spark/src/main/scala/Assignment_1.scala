@@ -7,7 +7,7 @@ object Assignment_1 {
       .master("local[*]")
       .getOrCreate()
 
-    val initialRDD = spark.sparkContext.parallelize(1 to 10000, 4)
+    val initialRDD = spark.sparkContext.parallelize(1 to 10000000, 4)
     println(s"Initial number of partitions: ${initialRDD.getNumPartitions}")
 
     println("Initial partition data:")
@@ -32,6 +32,12 @@ object Assignment_1 {
     coalescedRDD.glom().collect().zipWithIndex.foreach { 
       case (partitionData, idx) => println(s"Partition $idx: ${partitionData.take(10).mkString(", ")}")
     }
+
+    val finalResult = coalescedRDD.collect()
+    println("\nStep 3 complete: Check the Spark UI for the coalesce operation.")
+    println("Press ENTER to finish...")
+    readLine()
+    println(s"Final result count: ${finalResult.length}")
 
     spark.stop()
   }
