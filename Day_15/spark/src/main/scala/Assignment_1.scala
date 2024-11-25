@@ -7,12 +7,12 @@ object Assignment_1 {
       .master("local[*]")
       .getOrCreate()
 
-    val initialRDD = spark.sparkContext.parallelize(1 to 1000, 4)
+    val initialRDD = spark.sparkContext.parallelize(1 to 10000, 4)
     println(s"Initial number of partitions: ${initialRDD.getNumPartitions}")
 
     println("Initial partition data:")
     initialRDD.glom().collect().zipWithIndex.foreach { 
-      case (partitionData, idx) => println(s"Partition $idx: ${partitionData.take(5).mkString(", ")}")
+      case (partitionData, idx) => println(s"Partition $idx: ${partitionData.take(10).mkString(", ")}")
     }
 
     val repartitionedRDD = initialRDD.repartition(8)
@@ -21,7 +21,7 @@ object Assignment_1 {
 
     println("Partition data after repartition:")
     repartitionedRDD.glom().collect().zipWithIndex.foreach { 
-      case (partitionData, idx) => println(s"Partition $idx: ${partitionData.take(5).mkString(", ")}")
+      case (partitionData, idx) => println(s"Partition $idx: ${partitionData.take(10).mkString(", ")}")
     }
 
     
@@ -30,7 +30,7 @@ object Assignment_1 {
 
     println("Partition data after coalesce:")
     coalescedRDD.glom().collect().zipWithIndex.foreach { 
-      case (partitionData, idx) => println(s"Partition $idx: ${partitionData.take(5).mkString(", ")}")
+      case (partitionData, idx) => println(s"Partition $idx: ${partitionData.take(10).mkString(", ")}")
     }
 
     spark.stop()
