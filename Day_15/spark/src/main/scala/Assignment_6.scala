@@ -1,0 +1,3 @@
+class Assignment_6 {
+
+}
