@@ -12,7 +12,8 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion,
   "org.apache.spark" %% "spark-sql" % sparkVersion,
   "org.scalatest" %% "scalatest" % "3.2.2" % "test",
-//  "com.datastax.spark" %% "spark-cassandra-connector" % "3.0.1",
+  "org.apache.spark" %% "spark-yarn" % sparkVersion,
+  "com.google.cloud.bigdataoss" % "gcs-connector" % "hadoop3-2.2.5",
   "com.github.jnr" % "jnr-posix" % "3.1.7",
   "joda-time" % "joda-time" % "2.10.10", // Use the latest version
   "org.apache.spark" %% "spark-streaming" % sparkVersion,
